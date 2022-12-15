@@ -13,7 +13,15 @@
 </head>
 <body>
 
-    <section id="signUp">
+    <section id="menu">
+        <nav>
+            <p id="sign-up-nav-bar">Sign Up</p>
+            <p id="sign-in-nav-bar">Sign In</p>
+            <p id="search-nav-bar">Search Author</p>
+        </nav>
+      </section> 
+
+      <section id="signUp">
         <form>
             <h4>Sign Up</h4>
             <input type="text" placeholder="User Name" class="sign-Up">
@@ -24,14 +32,17 @@
             <button type="submit" id="sign-up-button" onclick="submitAlert()">Sign Up</button>
             </form>     
     </section>
-
-    <section id="menu">
-        <nav>
-            <p id="sign-up-nav-bar">Sign Up</p>
-            <p id="sign-in-nav-bar">Sign In</p>
-            <p id="search-nav-bar">Search Author</p>
-        </nav>
-      </section> 
+      
+      <section id="feedback-form">
+        <h4>Feedback Form</h4>
+        <form id="feedback">
+          <input type="text" placeholder="Your feedback" id="feedback-input">
+          <br>
+          <input type="text" placeholder="Your name" id="feedback-name">
+          <br>
+          <button type="submit" id="submit-feedback">Submit</button>
+        </form>
+      </section>
 
       <section id="Main-page">
         <div class="wrapper">
@@ -65,17 +76,7 @@
         <div id="listFavourite"></div>
      </section>
 
-     <section id="feedback-form">
-        <h4>Feedback Form</h4>
-        <form id="feedback">
-          <input type="text" placeholder="Your feedback" id="feedback-input">
-          <br>
-          <input type="text" placeholder="Your name" id="feedback-name">
-          <br>
-          <button type="submit" id="submit-feedback">Submit</button>
-        </form>
-      </section>
-
+     
     <script src="./index.js"></script>
 
 </body>
