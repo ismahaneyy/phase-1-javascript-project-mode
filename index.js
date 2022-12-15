@@ -20,3 +20,10 @@ function randomQuote(){
         });
       }
       signupForm();
+
+      function submitAlert() {
+        function alertTimeout() {
+          alert("Thank you for signing up");
+        }
+        setTimeout(alertTimeout, 5);
+      }submitAlert()
