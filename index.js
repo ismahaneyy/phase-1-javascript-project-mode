@@ -1,5 +1,10 @@
-const BaseUrl = "http://api.quotable.io/random"
+const quoteText = document.querySelector(".quote");
+const authorName = document.querySelector(".name")
+let quoteBtn = document.querySelector("button#quote")
+let favouriteBtn = document.querySelector("#Favourite")
+let likeBtn = document.querySelector(".like")
 
+const BaseUrl = "http://api.quotable.io/random"
 function randomQuote(){
     fetch(BaseUrl) // geting the API
     .then(res => res.json()) //brings data as a promise
