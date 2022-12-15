@@ -18,7 +18,6 @@ function randomQuote(){
     likeBtn.addEventListener("click", ()=>{
       likeBtn.style.color = "Red" //changing the like button to red when clicked
     })
-
     favouriteBtn.addEventListener("click", ()=>{
     favouriteBtn.style.color ="Red"//changing the favourite button to red when clicked
     let li = document.createElement("li"); //creating an li to list all the quotes added to favourite
