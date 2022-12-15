@@ -69,6 +69,7 @@ section#Main-page{
     justify-content: center;
     min-height: 100vh;
     background-color: var(--colorFour);
+    width: 100%;
     
 }
 .wrapper{
@@ -76,6 +77,7 @@ section#Main-page{
     background-color: var(--colorTwo);
     border-radius: 15px;
     padding: 30px 30px 25px;
+    display: inline-block;
 }
 
 .wrapper header{
@@ -86,8 +88,9 @@ section#Main-page{
 
 .wrapper .content{
     margin: 35px 0;
+   
 }
-
+ 
 .content .quote-area{
     display: flex;
     justify-content: center;
@@ -163,4 +166,10 @@ section#Main-page{
     border-radius: 30px;
     background-color: #5372f0;
 
+}
+
+div#listFavourite li{
+    background-color: var(--colorFour);
+    color: var(--colorTwo);
+    
 }
