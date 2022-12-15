@@ -4,6 +4,7 @@ let quoteBtn = document.querySelector("button#quote")
 let favouriteBtn = document.querySelector("#Favourite")
 let likeBtn = document.querySelector(".like")
 
+
 const BaseUrl = "http://api.quotable.io/random" // gets the API
 
 function randomQuote(){
@@ -54,4 +55,4 @@ quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is 
           alert("Thank you for signing up");
         }
         setTimeout(alertTimeout, 5);
-      }submitAlert()
+      }
