@@ -39,3 +39,25 @@ button#sign-up-button{
 section#sign-up form h4{
     padding-top: 20px;
 }
+
+/* section#menu */
+nav p{
+    display: inline;
+    padding-left: 45px;
+    color: var(--colorTwo);
+    width: 60px;
+    text-align: center;
+    float: right;
+    border-left: 1px solid --colorTwo
+   
+}
+nav{
+    padding-bottom: 60px;
+    padding-top: 10px;
+    background-color: var(--colorThree);
+}
+
+nav p:hover{
+    background-color: var(--colorOne);
+    color: var(--colorTwo);
+}
