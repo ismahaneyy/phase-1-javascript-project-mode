@@ -21,7 +21,11 @@ function randomQuote(){
 
     favouriteBtn.addEventListener("click", ()=>{
     favouriteBtn.style.color ="Red"//changing the favourite button to red when clicked
-  },{once: true})
+    let li = document.createElement("li"); //creating an li to list all the quotes added to favourite
+    li.innerHTML = data.content;
+    let div = document.getElementById("listFavourite")
+    div.append(li);  
+},{once: true})
   
     quoteBtn.innerText = "New Quote"  //when the quote loads the button text changes to new quote
     likeBtn.style.color = "#7b2cbf"  // the color of the likebutton changed back to the original color when a new quote is displayed 
