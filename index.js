@@ -23,7 +23,7 @@ function randomQuote(){
     let li = document.createElement("li"); //creating an li to list all the quotes added to favourite
     li.innerHTML = data.content;
     let p = document.createElement("p");
-    p.innerHTML = data.author; 
+    p.innerHTML = `~ ${data.author}`; 
     p.setAttribute("class", "authorName")
     let div = document.getElementById("listFavourite")
     div.append(li);  
@@ -45,18 +45,21 @@ function randomQuote(){
         e.preventDefault()
         let name = e.target.searchinput.value
         let authors = document.querySelectorAll("div#listFavourite p.authorName")
-        let contents = document.querySelectorAll("div#listFavourite li")
+        let authors2 = document.querySelectorAll("div#listFavourite p.authorName")
+        for(let author2 of authors2){
+          let quoteName2 = author2.previousSibling
+          quoteName2.style.color = "black"
+          author2.style.color = "black"
+        }
         console.log(authors)
         for(let author of authors){
         let nameCheck = author.textContent
-          if(name === nameCheck){
-            for (let content of contents){
-          content.scrollIntoView()
-          content.style.color = "red"
+          if(`~ ${name}` === nameCheck || name === nameCheck){
+           let quoteName = author.previousSibling
+           quoteName.scrollIntoView()
+           quoteName.style.color = "red"
           author.style.color = "red"
           console.log(author)
-            }
-          
           }
         }
 
