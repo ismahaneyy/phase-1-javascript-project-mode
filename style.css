@@ -214,10 +214,28 @@ section#feedback-form input::placeholder{
 
 form#search-author{
     display: inline;
+
+}
+
+form input#search-input{
+    width: 200px;
+    border-radius: 5px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+form button#search-button{
+    height: 30px;
+    border-radius: 15px;
+    margin-left: 10px;
+}
+
+form input#search-input::placeholder{
+    text-align: left;
     
 }
 
-
-
-
+form button#search-button:hover{
+    color: var(--colorOne);
+}
 
