@@ -214,6 +214,7 @@ section#feedback-form input::placeholder{
 
 form#search-author{
     display: inline;
+    margin-top: 40px;
 
 }
 
@@ -222,6 +223,8 @@ form input#search-input{
     border-radius: 5px;
     height: 40px;
     margin-left: 20px;
+    
+    
 }
 
 form button#search-button{
@@ -239,3 +242,6 @@ form button#search-button:hover{
     color: var(--colorOne);
 }
 
+form p#search-message{
+    color: var(--colorTwo);
+}
