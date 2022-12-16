@@ -85,7 +85,11 @@ function searchQuote(){
         for(let author of authors){
         let nameCheck = author.textContent
           if(name === nameCheck){
-            
+            let quoteByAuthor = document.createElement("p")
+            let searchedQuote = document.querySelector("div#listFavourite").firstChild
+            quoteByAuthor.textContent = searchedQuote.textContent
+            let divEmpty = document.getElementById("search-quote")
+            divEmpty.appendChild(quoteByAuthor)
           }
         }
 
