@@ -212,6 +212,11 @@ section#feedback-form input::placeholder{
 }
 
 
+form#search-author{
+    display: inline;
+    
+}
+
 
 
 
