@@ -22,12 +22,12 @@ function randomQuote(){
     favouriteBtn.style.color ="Red"//changing the favourite button to red when clicked
     let li = document.createElement("li"); //creating an li to list all the quotes added to favourite
     li.innerHTML = data.content;
-    let li2 = document.createElement("li");
-    li2.innerHTML = data.author; 
-    li2.setAttribute("class", "authorName")
+    let p = document.createElement("p");
+    p.innerHTML = data.author; 
+    p.setAttribute("class", "authorName")
     let div = document.getElementById("listFavourite")
     div.append(li);  
-    div.append(li2);
+    div.append(p);
 },{once: true})
   
     quoteBtn.innerText = "New Quote"  //when the quote loads the button text changes to new quote
@@ -38,6 +38,32 @@ function randomQuote(){
   copyBtn.addEventListener("click", ()=>{
     navigator.clipboard.writeText(quoteText.innerText)
   })
+
+
+  function searchQuote(){
+    document.querySelector("form#search-author").addEventListener("submit", function(e){
+        e.preventDefault()
+        let name = e.target.searchinput.value
+        let authors = document.querySelectorAll("div#listFavourite p.authorName")
+        let contents = document.querySelectorAll("div#listFavourite li")
+        console.log(authors)
+        for(let author of authors){
+        let nameCheck = author.textContent
+          if(name === nameCheck){
+            for (let content of contents){
+          content.scrollIntoView()
+          content.style.color = "red"
+          author.style.color = "red"
+          console.log(author)
+            }
+          
+          }
+        }
+
+    })
+}
+searchQuote()
+
 
 quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is dispalyed
 }randomQuote()
@@ -76,26 +102,6 @@ quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is 
         setTimeout(alertTimeout, 5);
       }
 
-function searchQuote(){
-    document.querySelector("form#search-author").addEventListener("submit", function(e){
-        e.preventDefault()
-        let name = e.target.searchinput.value
-        let authors = document.querySelectorAll("div li.authorName")
-        console.log(authors)
-        for(let author of authors){
-        let nameCheck = author.textContent
-          if(name === nameCheck){
-            let quoteByAuthor = document.createElement("p")
-            let searchedQuote = document.querySelector("div#listFavourite").firstChild
-            quoteByAuthor.textContent = searchedQuote.textContent
-            let divEmpty = document.getElementById("search-quote")
-            divEmpty.appendChild(quoteByAuthor)
-          }
-        }
-
-    })
-}
-searchQuote()
 
 
 

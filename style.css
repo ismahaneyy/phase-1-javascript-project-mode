@@ -169,10 +169,14 @@ section#Main-page{
 
 div#listFavourite li{
     background-color: var(--colorFour);
-    color: var(--colorTwo);
+    color: var(--colorThree);
     
 }
-
+div#listFavourite p{
+    background-color: var(--colorFour);
+    color: var(--colorThree);
+    
+}
 
 /* section#feedback-form */
 section#feedback-form{
