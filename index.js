@@ -71,3 +71,4 @@ quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is 
         }
         setTimeout(alertTimeout, 5);
       }
+
