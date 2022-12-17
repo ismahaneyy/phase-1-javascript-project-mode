@@ -235,19 +235,18 @@ form#search-author{
 
 }
 
-form input#search-input{
-    width: 200px;
-    border-radius: 5px;
+form input#searchinput{
+    width: 350px;
     height: 40px;
-    margin-left: 20px;
-    
-    
+    margin-left: 20px;  
+    border-radius: 5px; 
 }
 
 form button#search-button{
     height: 30px;
     border-radius: 15px;
     margin-left: 10px;
+    width: 50px;
 }
 
 form input#search-input::placeholder{
