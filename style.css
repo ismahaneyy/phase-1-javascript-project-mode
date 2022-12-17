@@ -271,3 +271,9 @@ h2{
 
 }
 
+h1{
+    color: #000411;
+    background-color: var(--colorFour);
+    text-align: center;
+    font-size: 50px;
+}
