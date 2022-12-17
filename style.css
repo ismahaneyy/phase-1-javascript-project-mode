@@ -90,6 +90,7 @@ section#Main-page{
     font-size: 35px;
     font-weight: 600px;
     text-align: center;
+    font-style: italic;
 }
 
 .wrapper .content{
@@ -260,5 +261,13 @@ form button#search-button:hover{
 
 form p#search-message{
     color: var(--colorTwo);
+}
+
+h2{
+    font-size: 35px;
+    font-style: italic;
+    background-color: var(--colorFour);
+    text-align: center;
+
 }
 
