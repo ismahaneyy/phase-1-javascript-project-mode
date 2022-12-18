@@ -26,8 +26,8 @@ function randomQuote(){
     p.innerHTML = `~ ${data.author}`; 
     p.setAttribute("class", "authorName")
     let div = document.getElementById("listFavourite")
-    div.append(li);  
-    div.append(p);
+    div.append(li);  //appending li to div
+    div.append(p); //appending p to div
 },{once: true})
   
     quoteBtn.innerText = "New Quote"  //when the quote loads the button text changes to new quote
@@ -41,24 +41,24 @@ function randomQuote(){
 
 
   function searchQuote(){
-    document.querySelector("form#search-author").addEventListener("submit", function(e){
+    document.querySelector("form#search-author").addEventListener("submit", function(e){ //adding event listener submit
         e.preventDefault()
-        let name = e.target.searchinput.value
-        let authors = document.querySelectorAll("div#listFavourite p.authorName")
+        let name = e.target.searchinput.value 
+        let authors = document.querySelectorAll("div#listFavourite p.authorName") //getting all the authors name
         let authors2 = document.querySelectorAll("div#listFavourite p.authorName")
         for(let author2 of authors2){
-          let quoteName2 = author2.previousSibling
-          quoteName2.style.color = "black"
-          author2.style.color = "black"
+          let quoteName2 = author2.previousSibling // getting the quotes
+          quoteName2.style.color = "black" //changes to black after the first loop when a new author name is entered 
+          author2.style.color = "black"    //changes to black after the first loop when a new author name is entered 
         }
         console.log(authors)
         for(let author of authors){
         let nameCheck = author.textContent
-          if(`~ ${name}` === nameCheck || name === nameCheck){
-           let quoteName = author.previousSibling
-           quoteName.scrollIntoView()
-           quoteName.style.color = "red"
-          author.style.color = "red"
+          if(`~ ${name}` === nameCheck || name === nameCheck){ // when one searches the author name only or the authorname with  this ~
+           let quoteName = author.previousSibling  // getting the quotes
+           quoteName.scrollIntoView()  // when the author name is searched, it directly scrolls to the specific quote and the author name 
+           quoteName.style.color = "red"  // changes to red to show its the quote being searched 
+          author.style.color = "red"       // changes to red to show the author's name being searched 
           console.log(author)
           }
         }
@@ -94,13 +94,13 @@ quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is 
         document.querySelector("form#feedback").addEventListener("submit",function()
         {
        document.querySelector("section#feedback-form").style.display = "none"
-       alert("Thank you for your feedback")
-        })
+       alert("Thank you for your feedback")   // to alert the user for giving feedback
+        }) 
        }feedBackForm()
 
-      function submitAlert() {
+      function submitAlert() {   // to alert the user for signing up
         function alertTimeout() {
-          alert("Thank you for signing up");
+          alert("Thank you for signing up");  
         }
         setTimeout(alertTimeout, 5);
       }
