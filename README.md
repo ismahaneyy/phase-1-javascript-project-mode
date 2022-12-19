@@ -1,4 +1,4 @@
-# Phase 1 Project Guidelines
+# Random Quote Generator
 
 This project is about Random Quote Generator, it generates random quotes from the API. THis project uses JavaScript language. 
 
