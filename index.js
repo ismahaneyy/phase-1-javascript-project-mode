@@ -7,11 +7,10 @@ let favouriteBtn = document.querySelector("#Favourite")
 let likeBtn = document.querySelector(".like")
 
 
-const BaseUrl = "http://api.quotable.io/random" // gets the API
 
 function randomQuote(){
   quoteBtn.innerText = "loading Quote..." // while a new quote is loading, the text in the quotebtn reads loading Quote...
-    fetch(BaseUrl) // gets the API
+    fetch("http://api.quotable.io/random") // gets the API
     .then(res => res.json()) //brings data as a promise
     .then(data => {console.log(data); //returns the data
     quoteText.innerText = data.content;
