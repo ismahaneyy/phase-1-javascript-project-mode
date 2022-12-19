@@ -6,13 +6,11 @@ let quoteBtn = document.querySelector("button#quote")
 let favouriteBtn = document.querySelector("#Favourite")
 let likeBtn = document.querySelector(".like")
 
-
-
 function randomQuote(){
   quoteBtn.innerText = "loading Quote..." // while a new quote is loading, the text in the quotebtn reads loading Quote...
     fetch("http://api.quotable.io/random") // gets the API
     .then(res => res.json()) //brings data as a promise
-    .then(data => {console.log(data); //returns the data
+    .then(function(data) {console.log(data); //returns the data
     quoteText.innerText = data.content;
     authorName.innerText = data.author;
     
