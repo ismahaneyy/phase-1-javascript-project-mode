@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function(){
+
 const quoteText = document.querySelector(".quote");
 const authorName = document.querySelector(".name")
 let quoteBtn = document.querySelector("button#quote")
@@ -73,27 +75,28 @@ quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is 
 
 
     function signupForm() {
-        document.querySelector("section#signUp").style.display = "none";
+        document.querySelector("section#signUp").style.display = "none"; // to hide the form 
         let signUp = document.querySelector("p#sign-up-nav-bar");
         signUp.addEventListener("click", function () {
-          document.querySelector("section#signUp").setAttribute("style", "");
+          document.querySelector("section#signUp").setAttribute("style", ""); //shows the form
           let Submit = document.querySelector("button#sign-up-button");
           Submit.addEventListener("click", function (event) {
             event.preventDefault();
-            document.querySelector("section#signUp").style.display = "none";
+            document.querySelector("section#signUp").style.display = "none"; // to hide the form 
+            submitAlert()
           });
         });
       }
       signupForm();
 
       function feedBackForm(){
-        document.querySelector("section#feedback-form").style.display = "none"
+        document.querySelector("section#feedback-form").style.display = "none"  // to hide it when its not in use
         document.querySelector("p#leave-feedback").addEventListener("click",function(){
-         document.querySelector("section#feedback-form").setAttribute("style","")
+         document.querySelector("section#feedback-form").setAttribute("style","") //shows the form
         })
         document.querySelector("form#feedback").addEventListener("submit",function()
         {
-       document.querySelector("section#feedback-form").style.display = "none"
+       document.querySelector("section#feedback-form").style.display = "none"  // to hide the form 
        alert("Thank you for your feedback")   // to alert the user for giving feedback
         }) 
        }feedBackForm()
@@ -105,7 +108,7 @@ quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is 
         setTimeout(alertTimeout, 5);
       }
 
-
+})
 
 
 

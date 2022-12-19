@@ -21,6 +21,8 @@ section#signUp{
     height: 400px;
     text-align: center;
     margin-top: 100px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 input{
@@ -63,8 +65,11 @@ nav{
     z-index: 0;
     width: 100%;
     height: 70px;
+    
 }
-
+nav a{
+    text-decoration: none;
+}
 nav p:hover{
     color: var(--colorOne);
 }
@@ -180,7 +185,7 @@ section#Main-page{
 
 /* section#feedback-form */
 section#feedback-form{
-    margin-top:20px;
+    margin-top:100px;
     text-align:center;
     width:400px;
     margin-left:auto;
