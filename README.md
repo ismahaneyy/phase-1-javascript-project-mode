@@ -1,6 +1,6 @@
 # Random Quote Generator
 
-This project is about Random Quote Generator, it generates random quotes from the API. THis project uses JavaScript language. 
+This project is about Random Quote Generator, it generates random quotes. THis project uses JavaScript language. 
 
 - There are two parts of this page
 
@@ -69,16 +69,11 @@ This project is about Random Quote Generator, it generates random quotes from th
 
     - code .
 
-- test server by copy-pasting this URL in postman or browser
+- OR : 
+- You can use this link to access the deployed site  https://ismahaneyy.github.io/phase-1-javascript-project-mode/
 
-    - "http://api.quotable.io/random"
-
--NB: you must copy the URL in either postman or browser for the random quotes to display
 
 ```
-Meta
-----
-
 Author:
    * **Ismahan Abdirizak** - *Initial work* - [ismahaneyy](https://github.com/ismahaneyy)
 
