@@ -69,13 +69,11 @@ This project is about Random Quote Generator, it generates random quotes from th
 
     - code .
 
-- run this command to get backend started:
-
-    - json-server--watch db.json
-
 - test server by copy-pasting this URL in postman or browser
 
     - "http://api.quotable.io/random"
+
+-NB: you must copy the URL in either postman or browser for the random quotes to display
 
 ```
 Meta
