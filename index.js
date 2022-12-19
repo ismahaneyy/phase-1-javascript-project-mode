@@ -8,7 +8,7 @@ let likeBtn = document.querySelector(".like")
 
 function randomQuote(){
   quoteBtn.innerText = "loading Quote..." // while a new quote is loading, the text in the quotebtn reads loading Quote...
-    fetch("http://api.quotable.io/random") // gets the API
+    fetch("https://api.quotable.io/random") // gets the API 
     .then(res => res.json()) //brings data as a promise
     .then(function(data) {console.log(data); //returns the data
     quoteText.innerText = data.content;
