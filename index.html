@@ -37,12 +37,15 @@
 
   <!-- section three: all about the sign up bar -->
       <section id="signUp">
-        <form>
+        <form id="user-details">
             <h4 id="sign-up">Sign Up</h4>
-            <input type="text" placeholder="User Name" class="sign-Up">
+            <input type="text" placeholder="User Name" class="sign-Up" id="name"></input>
+            <small>Error Message</small>
             <br>
-            <input type="text" placeholder="Enter Email"></input>
-            <input type="password" placeholder="Create Password" class="signUp"></input>
+            <input type="text" placeholder="Enter Email" id="email"></input>
+            <small>Error Message</small>
+            <input type="password" placeholder="Create Password" class="signUp" id="pass"></input>
+            <small>Error Message</small>
             <br>
             <button type="submit" id="sign-up-button" onclick="submitAlert()">Sign Up</button>
             </form>     
@@ -50,11 +53,11 @@
       
   <!-- section four: all about feedback form -->
     <section id="feedback-form">
-        <h4 id="feedback">Feedback Form</h4>
-        <form id="feedback">
-          <input type="text" placeholder="Your feedback" id="feedback-input">
+        <h4 id="feedbackHeader">Feedback Form</h4>
+        <form id="feedBack">
+          <input type="text" placeholder="Your feedback" id="feedbackinput">
           <br>
-          <input type="text" placeholder="Your name" id="feedback-name">
+          <input type="text" placeholder="Your name" id="feedbackname">
           <br>
           <button type="submit" id="submit-feedback">Submit</button>
         </form>

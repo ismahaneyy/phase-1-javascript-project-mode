@@ -6,6 +6,7 @@ let quoteBtn = document.querySelector("button#quote")
 let favouriteBtn = document.querySelector("#Favourite")
 let likeBtn = document.querySelector(".like")
 
+
 function randomQuote(){
   quoteBtn.innerText = "loading Quote..." // while a new quote is loading, the text in the quotebtn reads loading Quote...
     fetch("https://api.quotable.io/random") // gets the API 
@@ -76,12 +77,7 @@ quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is 
         let signUp = document.querySelector("p#sign-up-nav-bar");
         signUp.addEventListener("click", function () {
           document.querySelector("section#signUp").setAttribute("style", ""); //shows the form
-          let Submit = document.querySelector("button#sign-up-button");
-          Submit.addEventListener("click", function (event) {
-            event.preventDefault();
-            document.querySelector("section#signUp").style.display = "none"; // to hide the form 
-            submitAlert()
-          });
+
         });
       }
       signupForm();
@@ -91,11 +87,6 @@ quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is 
         document.querySelector("p#leave-feedback").addEventListener("click",function(){
          document.querySelector("section#feedback-form").setAttribute("style","") //shows the form
         })
-        document.querySelector("form#feedback").addEventListener("submit",function()
-        {
-       document.querySelector("section#feedback-form").style.display = "none"  // to hide the form 
-       alert("Thank you for your feedback")   // to alert the user for giving feedback
-        }) 
        }feedBackForm()
 
       function submitAlert() {   // to alert the user for signing up
@@ -105,16 +96,49 @@ quoteBtn.addEventListener("click", randomQuote); // when clicked a new quote is 
         setTimeout(alertTimeout, 5);
       }
 
+
+
+
+
+
+function alertFeedBack(){
+document.querySelector("form#feedBack")
+  .addEventListener("submit", function (event){
+    event.preventDefault();
+    let feedbackMsgs = event.target.feedbackinput.value;
+    let feedbackNme = event.target.feedbackname.value;
+    if (feedbackMsgs === "" || feedbackNme === ""){
+      alert("Please fill all the empty spaces");
+    }
+    else {
+      document.querySelector("form#feedBack").reset();
+      document.querySelector("section#feedback-form").style.display = "none";
+      submitAlert();
+    }
+  })
+  
+}alertFeedBack()
+
+function alertsignup(){
+  document.querySelector("form#user-details")
+    .addEventListener("submit", function (event){
+      event.preventDefault();
+      let username = event.target.name.value;
+      let emailAdress = event.target.email.value;
+      let userPassword = event.target.pass.value;
+      if (userPassword === "" || username === "" || emailAdress === ""){
+        alert("Please fill all the empty spaces");
+      }
+      else {
+        document.querySelector("form#user-details").reset();
+        document.querySelector("section#signUp").style.display = "none";
+        submitAlert();
+      }
+    })
+    
+  }alertsignup()
+
 })
-
-
-
-
-
-
-
-
-
 
 
 
