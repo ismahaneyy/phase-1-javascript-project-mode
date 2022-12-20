@@ -44,6 +44,10 @@ function randomQuote(){
     document.querySelector("form#search-author").addEventListener("submit", function(e){ //adding event listener submit
         e.preventDefault()
         let name = e.target.searchinput.value 
+        if (name === "" ){
+          alert("No valid input")
+        }
+        else{
         let authors = document.querySelectorAll("div#listFavourite p.authorName") //getting all the authors name
         let authors2 = document.querySelectorAll("div#listFavourite p.authorName")
         for(let author2 of authors2){
@@ -60,9 +64,10 @@ function randomQuote(){
            quoteName.style.color = "red"  // changes to red to show its the quote being searched 
           author.style.color = "red"       // changes to red to show the author's name being searched 
           console.log(author)
+          
           }
         }
-
+      }
     })
 }
 searchQuote()

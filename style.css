@@ -82,6 +82,7 @@ section#Main-page{
     min-height: 100vh;
     background-color: var(--colorFour);
     width: 100%;
+    flex-wrap: wrap;
 }
 .wrapper{
     width: 605px;
@@ -289,3 +290,26 @@ h1{
     font-style: italic;
 }
 
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    nav p{
+        padding-left: 1px;
+        color: var(--colorTwo);
+    }
+
+    div#listFavourite li{
+       
+       
+        font-size: 20px;
+        line-height: 40px;
+        list-style: none;
+        padding-left: 2px;
+    }
+
+    
+
+}
