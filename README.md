@@ -2,6 +2,9 @@
 
 This project is about Random Quote Generator, it generates random quotes. THis project uses JavaScript language. 
 
+- You can use this link to access the deployed site 
+     - https://ismahaneyy.github.io/phase-1-javascript-project-mode/
+
 - There are two parts of this page
 
 ** Menu section ** 
